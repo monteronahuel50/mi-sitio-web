@@ -1,0 +1,66 @@
+:root{
+  --primary: #1b6b34;
+  --primary-dark: #13551a;
+  --accent: #9adf7a;
+  --bg: #f7fbf7;
+  --muted: #6b6b6b;
+}
+
+
+*{ box-sizing: border-box; }
+body{
+  font-family: Inter, "Arial", sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:#222;
+  line-height:1.5;
+}
+
+
+.navbar { background: var(--primary) !important; }
+.brand-text { font-weight:600; }
+
+
+.hero{
+  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('https://images.homify.com/v1539384961/p/photo/image/2747657/S2Arquitectos_AltaFirenze_72dpi_08.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  padding: 60px 0;
+}
+
+
+.card { border: none; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.card-img-top { height: 220px; object-fit: cover; display:block; }
+
+
+.card-equal { display:flex; flex-direction: column; }
+.row-equal .card-equal { height: 100%; }
+
+
+.gallery-compact .project-thumb{ width: 30%; min-width: 90px; height: 80px; object-fit: cover; }
+
+
+.form-control:focus{ box-shadow: 0 0 0 .15rem rgba(27,107,52,0.15); border-color: var(--primary); }
+
+footer{ background:#111; color:#fff; }
+
+
+#backToTop {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: none;
+  z-index: 999;
+}
+
+
+@media (max-width: 767px){
+  .hero{ min-height: 240px; padding: 30px 0; }
+  .card-img-top{ height: 160px; }
+  .gallery-compact .project-thumb{ width: 48%; height: 120px; }
+  .navbar { padding-top: .35rem; padding-bottom:.35rem; }
+}
+
+
+.sr-only{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
